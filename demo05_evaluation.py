@@ -48,3 +48,6 @@ print("train metrics: %r" % train_metrics)
 # 使用评估数据评估一下模型，目的是验证模型的泛化性能
 eval_metrics = estimator.evaluate(input_fn=eval_input_fn)
 print("eval metrics: %s" % eval_metrics)
+
+predict_metrics = list(estimator.predict(input_fn=eval_input_fn))
+print("predict metrics: %s" % predict_metrics)
